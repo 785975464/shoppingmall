@@ -1,0 +1,222 @@
+html,body{
+	width:100%;
+}
+body{
+	margin: 0px;
+}
+.container{
+	margin: 20px;
+}
+
+.align-center {
+   text-align:center;
+}
+
+.products_list{
+	margin-left:10%;
+	margin-right:10%;
+}
+
+.sub_title{
+	font:1.5rem "Microsoft YaHei";	/* 微软雅黑 */
+	border-bottom: 1px solid #a64c4c;
+}
+
+.products_column{
+
+}
+
+.products_column li {
+   	display:inline-block;
+   	padding:0px 30px;
+}
+    
+.product_info {
+	border-bottom: 1px solid grey;
+	padding:10px 0px;
+	color:grey;
+    /* width:200px; */  
+    /* display:inline !important; */
+    /*border:1px solid red;*/  
+}
+    
+.product_info h3 {
+	font-family:"SimHei";	/* 黑体 */
+	color:black;
+}
+
+.price_info{ 
+	padding:10px 0px; 
+	text-align:center;
+}
+ 
+.product_price{
+	border: 1px solid #544f4b;
+	padding:10px 10px; 
+	background-color:#544f4b;
+	color:white;
+	font:bold 12px "Microsoft YaHei";
+}
+
+/* .price_add{
+	padding:10px 10px;
+	background-color:#544f4b;
+} */
+
+.add_cart{
+	padding:10px 10px;
+	background-color:#544f4b;
+	font: 12px "Microsoft YaHei";
+	color: yellow;
+}
+
+.pr_price{
+	display:block;
+	font: 12px "Microsoft YaHei";
+	color: yellow;
+	/* float:right; */
+}
+
+.cart_table td{
+	border: 1px solid #ebebeb;
+}
+
+.cart_table th{
+	border: 1px solid #ebebeb;
+	padding:10px;
+}
+ 
+.showtotal{
+	float:right;
+	/* position: absolute;
+	right: 0px; */
+	margin: 20px 50px 20px 0px;
+}
+
+.showtotal td{
+	padding: 20px 50px;
+	font: 1rem "Microsoft YaHei";
+}
+
+.showtotal .totalnum{
+	font: bold 1rem "Microsoft YaHei";
+	color: #f38256;
+}
+.settlement{
+	width: 100%;
+	height: 50px;
+	border: 1px solid #eee6df;
+	/* margin: 0px 1%; */
+	/* padding: 2rem 0rem; */
+	position: relative;
+	background-color: #544f4b;
+}
+.settlementbtn{
+	height: 46px;
+	background-color:#544f4b;
+	color: white;
+	right: 10px;
+	position: absolute;
+	top: 50%;
+   margin-top: -23px;
+}
+.settlementbtn a {
+   text-decoration: none;
+}
+.settle_btn{
+	padding: 10px 20px;
+	font: bold 1rem "Microsoft YaHei";
+}
+.settle{
+	background-color: #f38256;
+}
+
+.cart_title{
+	border: 1px solid #e0efc6;
+	border-top: 5px solid #b17f7f;
+	margin: 20px 0px;
+	height: 100px;
+	line-height: 100px;
+	position: relative;
+	/* height: 100px;
+	line-height: 100px;
+	overflow: hidden; */
+}
+ 
+.cart_title div {
+	display: inline;
+	height: 100px;
+	position: absolute;
+   top: 50%;
+   margin-top: -50px;
+   font-size: 2rem;
+color: #a0af70;
+   /* 垂直居中。通过position定位来实现。将div设置成相对定位relative，将img设置成绝对定位absolute，left:50%，top:50%，
+   	此时图片的左上角位于div的中心，要是图片的中心位于div的中心，就需要将图片向上移动图片高度的一半，并向左移动图片宽度的一半。 */
+}
+
+.cart_foot {
+	margin-top: 20px;
+	border-top: 5px solid #f38256;
+}
+   
+.order_info_title{
+	/* border: 1px solid #544f4b; */
+	padding: 20px;
+	background-color: #544f4b;
+	color: white;
+	font: 1.5rem "Microsoft YaHei";
+}
+ 
+.confirm_order_info_total{
+	margin: 20px 0px;
+	width: 100%;
+	height: 50px;
+	background-color: #f38256;
+}
+.confirm_order_info_total p{
+	/* padding: 20px; */
+	background-color: #f38256;
+	color: black;
+	right: 60px;
+	position: absolute;
+}
+.confirm_order_info_total span{
+	color: white;
+}
+.user_order_info div{
+	padding: 20px 0px 0px 20px;
+	font: 1rem "Microsoft YaHei";
+}
+.user_order_info div input{
+	height: 1.5rem;
+}
+.submit_order_info{
+   	margin: 20px 0px;
+   	width: 100%;
+   	height: 50px;
+   	background-color: #544f4b;
+}
+.submit_order_info_btn{
+	background-color: #f38256;
+	height: 50px;
+	padding: 0px 20px;
+	right: 40px;
+	position: absolute;
+	font: 1rem "Microsoft YaHei";
+}
+.order_info_check{
+	margin:30px 50px;
+	font: 1rem "Microsoft YaHei";
+}
+.order_info_check div{
+	padding: 10px;
+}
+.bankinfo{
+	text-align:center;
+}
+.banklogo{
+	/* width: 300px; */
+    display: inline;
+    padding: 20px 30px;
+}

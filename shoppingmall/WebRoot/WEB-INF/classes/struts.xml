@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd"> 
+    
+<struts>
+	<constant name="struts.multipart.maxSize" value="10485760"/> 	<!-- 修改默认最大上传文件大小 -->
+	
+    <package name="shoppingmall" extends="json-default"><!-- jason-default继承了struts-default --> 
+        
+        <global-results>
+        <!-- 省去其他公共配置 -->
+	        <result name="stream" type="stream">
+	            <param name="inputName">inputStream</param>
+	        </result>
+		</global-results>
+
+        <!-- category_update.actiocan： 访问update方法 -->  
+        <action name="category_*" class="categoryAction" method="{1}">  
+        	<!-- 必须要先添加json包，然后上面继承json-default -->  
+            <result name="jsonMap" type="json">
+            <!-- 要转换成json对象的数据 -->  
+                <param name="root">pageMap</param>
+                <!-- 配置黑名单，过滤不需要的选项 ，支持正则表达式  
+                json格式：{recordsTotal:3,recordsFiltered:3,data:[{id:3,hot:true…}]}  
+                -->
+                <!-- 过滤data[0].hot --> 
+                <!-- <param name="excludeProperties"> 
+                	data\[\d+\]\.hot
+                </param> -->
+            </result>  
+            
+            <!-- <result name="stream" type="stream"> --> <!-- 以stream的形式，type为stream -->  
+                <!-- <param name="inputName">inputStream</param> --> <!-- imputStream中有要传的数据 -->  
+             <!-- </result> -->
+        </action>  
+        
+        <action name="product_*" class="productAction" method="{1}">  
+            <result name="jsonMap" type="json">
+            	<!-- 要转换成json对象的数据 -->  
+                <param name="root">pageMap</param>
+            </result>  
+            
+            <result name="stream" type="stream"> <!-- 以stream的形式，type为stream -->  
+                <param name="inputName">inputStream</param> <!-- imputStream中有要传的数据 -->  
+             </result>
+        </action>
+        
+        <!-- 用来完成系统 请求转发的action,所有的请求都交给execute-->  
+	    <action name="send_*_*" class="sendAction">  
+	        <result name="send">{1}/{2}.jsp</result>  
+	    </action>
+	    
+	    <action name="sorder_*" class="sorderAction" method="{1}">  
+		    <result name="showCart">showCart.jsp</result>  
+		    <result name="jsonList" type="json"></result>	<!-- 不用配root参数 -->
+		</action>
+		
+		<action name="order_*" class="orderAction" method="{1}">  
+		    <result name="bank">bank.jsp</result>  
+		</action> 
+		
+		<action name="user_*" class="userAction" method="{1}">  
+		    <result name="login" type="redirect">/login.jsp</result> 
+		    <result name="index">/index.jsp</result> 
+		    <result name="goURL" type="redirect">${#session.goURL}</result> <!-- 从值栈中取数据，此处报错但是可以正常运行 -->
+		</action> 
+		
+		<action name="pay_*" class="payAction" method="{1}">  
+		    <result name="pay">/pay.jsp</result>  
+		</action>
+    </package>  
+    
+  	
+</struts> 

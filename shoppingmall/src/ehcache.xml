@@ -1,0 +1,22 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../config/ehcache.xsd">  
+      
+    <!-- 如果缓存内存溢出，则存储到硬盘空间 -->  
+    <diskStore path="java.io.tmpdir"/>  
+    
+  	<!-- 内存支持的最大对象的数量 -->
+  	<!-- 对象是否永久生效，建议为false，这样下面的两个参数才会有效 --> 
+  	<!-- 对象的间隔周期，默认单位为秒。即60秒后如果还没人用这个对象，会提前销毁 -->
+  	<!-- 对象的生命周期，默认单位为秒 -->
+  	<!-- 是否支持溢出到硬盘，建议为true -->
+  	<!-- maxElementsOnDisk="10000000" 硬盘上支持的最大对象的数量 --> 
+  	<!-- 对象的替换策略 --> 
+  	
+    <defaultCache  
+        maxElementsInMemory="1000"  
+        eternal="false"  
+        timeToIdleSeconds="60"   
+        timeToLiveSeconds="120"  
+        overflowToDisk="true"    
+        memoryStoreEvictionPolicy="LFU"  
+       />       
+</ehcache>  
