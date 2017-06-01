@@ -3,6 +3,7 @@ html,body{
 }
 body{
 	margin: 0px;
+	'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;
 }
 .container{
 	margin: 20px;
@@ -219,4 +220,97 @@ color: #a0af70;
 	/* width: 300px; */
     display: inline;
     padding: 20px 30px;
+}
+.login_main{
+	height: 100%;
+	text-align: center;
+	/* background-color: #51585d; */
+}
+
+.login_container{
+	position: relative;
+	width: 300px;
+	margin: 0 auto;
+	height: 400px;
+	top: 50%;
+	transform: translateY(-50%);
+	/* CSS3的transform属性也可以实现这个功能，
+	通过设置div的transform: translateY(-50%)，
+	意思是使得div向上平移（translate）自身高度的一半(50%) 
+	或者设置margin-top: -200px;（高度的一半）*/
+	
+	/* text-align:center; */
+	/* display: inline-block;
+    vertical-align: middle; */
+    text-align: left;
+}
+.login_subtitle{
+	/* font: 1rem "Microsoft YaHei"; */
+	margin: 30px 0 20px;
+	font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    color : #555;
+}
+.center{
+	text-align: center;
+}
+.login_input_groups{
+	padding: 1px 0;
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+}
+.login_input{
+	width: 100%;
+	border: 0;
+	outline:none;	/* 去除边框 */
+	border-radius: 0px;
+    box-shadow: none;
+    background: #fff;
+    padding: 1em .8em;
+    line-height: 19px;
+}
+input[name='password']{
+	border-top: 1px solid #e8e8e8;
+}
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
+	/* border: 1px solid #CCC!important; */
+}
+input::-webkit-input-placeholder {
+	/* placeholder颜色  */
+	color: #aab2bd;
+	/* placeholder字体大小  */
+	font-size: 12px;
+	/* placeholder位置  */
+	/* text-align: right; */
+}
+.login_submit_btn{
+	margin-top: 18px;
+}
+.login_btn{
+	width : 100%;
+	background : #0f88eb;
+	color : white;
+	line-height: 41px;
+	/* font-size: 15px; */
+	border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.login_btn:hover{
+	background : #55abed;
+}
+.register_btn{
+	display: block;
+    padding: 0;
+	width: 100%;
+    height: 41px;
+    line-height: 39px;
+    color: #5fa6e5;
+    background: 0 0;
+    border: 1px solid #96c2e9;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: 0;
 }
